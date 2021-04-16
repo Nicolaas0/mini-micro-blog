@@ -1,4 +1,5 @@
 import React from 'react';
+import Tweet from './Tweet';
 
 function app() {
 
@@ -7,9 +8,10 @@ function app() {
   }
 
   return (
-    <div>
+    <div className='app'>
       <h1>Hello react!!</h1>
       <button onClick={hello}>Click me!</button>
+      <Tweet/>
     </div>
   );
 }
