@@ -1,15 +1,13 @@
 import React from 'react';
+import Navbar from './navbar';
 
 function app() {
-
-  function hello() {
-    console.log('Hello!');
-  }
-
   return (
-    <div className='app'>
-      <h1>Hello react!!</h1>
-      <button onClick={hello}>Click me!</button>
+    <div className='App'>
+      <Navbar />
+      <div className='content'>
+        
+      </div>
     </div>
   );
 }
