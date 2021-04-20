@@ -1,6 +1,7 @@
 import React from 'react';
 import Navbar from './navbar';
 import Form from './Form'
+import Result from './Result'
 
 function app() {
   return (
@@ -8,6 +9,7 @@ function app() {
       <Navbar />
       <div className='content'>
         <Form />
+        <Result />
       </div>
     </div>
   );
