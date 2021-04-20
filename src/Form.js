@@ -3,10 +3,16 @@ import "./index.css";
 
 const Form = () => {
   return (
-    <div>
+    <div className='form'>
       <div className="container">
-        <form action=""></form>
+        <form action="">
+          <label htmlFor="">What Do you think?</label>
+          <input type="text"/>
+          <button>Submit</button>
+        </form>
       </div>
     </div>
   );
 };
+
+export default Form;
