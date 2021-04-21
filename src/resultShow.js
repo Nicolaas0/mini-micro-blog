@@ -8,7 +8,7 @@ const ResultShow = (prop) => {
     <div className="result-show">
       {data.map((d) => (
         <div className="dataPrev" key={d.id}>
-          <h3>{d.username}</h3>
+          <div>{d.username}</div>
           <p>{d.message}</p>
           <div>Like:{d.like}</div>
         </div>
