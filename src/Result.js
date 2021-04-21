@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.css';
 import { useState } from 'react';
+import ResultShow from './resultShow';
 
 const Result = () => {
     const [data, setData] = useState( [
@@ -24,19 +25,13 @@ const Result = () => {
       }
     ]);
 
-    return (
-        <div className='result'>
-            {
-                data.map((d) => (
-                    <div className='dataPrev' key={d.id}>
-                        <h3>{d.username}</h3>
-                        <p>{d.message}</p>
-                        <div>Like:{d.like }</div>
-                    </div>
-                ))
-            }
-        </div>
-    );
+  return (
+    <React.StrictMode>
+      <div>
+        <ResultShow val={data} />
+      </div>
+    </React.StrictMode>
+  );
 }
 
 export default Result;
