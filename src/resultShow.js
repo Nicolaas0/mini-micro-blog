@@ -2,7 +2,7 @@ import React from "react";
 
 const ResultShow = (prop) => {
   const data = prop.val;
-  console.log(prop, data);
+  const handleDelete = prop.del;
 
   return (
     <div className="result-show">
@@ -11,6 +11,7 @@ const ResultShow = (prop) => {
           <div>{d.username}</div>
           <p>{d.message}</p>
           <div>Like:{d.like}</div>
+          <button onClick={() => handleDelete(d.id)}>Delete</button>
         </div>
       ))}
     </div>
