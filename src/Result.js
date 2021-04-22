@@ -24,11 +24,16 @@ const Result = () => {
         id: 3,
       }
     ]);
+  
+  const handleDelete = (id) => {
+    const del = data.filter(dat => dat.id !== id);
+    setData(del);
+  }
 
   return (
     <React.StrictMode>
       <div>
-        <ResultShow val={data} />
+        <ResultShow val={data} del={handleDelete} />
         <ResultShow val={data.filter((dat)=>dat.username === '@nicolaas')} title='Nicolaas comments'/>
       </div>
     </React.StrictMode>
