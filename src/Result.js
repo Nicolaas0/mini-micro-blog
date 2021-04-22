@@ -29,6 +29,7 @@ const Result = () => {
     <React.StrictMode>
       <div>
         <ResultShow val={data} />
+        <ResultShow val={data.filter((dat)=>dat.username === 'nicolaas')} title='Nicolaas comments'/>
       </div>
     </React.StrictMode>
   );
