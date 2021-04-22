@@ -3,7 +3,6 @@ import React from "react";
 const ResultShow = (prop) => {
   const data = prop.val;
   const handleDelete = prop.del;
-  const handleLike = prop.like;
 
   return (
     <div className="result-show">
