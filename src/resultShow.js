@@ -3,6 +3,7 @@ import React from "react";
 const ResultShow = (prop) => {
   const data = prop.val;
   const handleDelete = prop.del;
+  const handleLike = prop.like;
 
   return (
     <div className="result-show">
@@ -12,7 +13,14 @@ const ResultShow = (prop) => {
           <p id="msg">{d.message}</p>
           <div id="like">Like:{d.like}</div>
           <img
-            id="ic"
+            className="ic"
+            src="https://img.icons8.com/material-sharp/50/000000/facebook-like.png"
+          />
+          <img
+            className='ic'
+            src="https://img.icons8.com/material-sharp/24/000000/thumbs-down.png" />
+          <img
+            className="ic"
             onClick={() => handleDelete(d.id)}
             src="https://img.icons8.com/material-outlined/50/000000/add-trash.png"
           />
