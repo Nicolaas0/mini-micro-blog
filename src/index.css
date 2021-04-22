@@ -6,12 +6,14 @@
   font-family: "Open Sans";
   outline: none;
 }
-
+/* root component css */
 .App{
   display: flex;
   flex-direction: column;
 }
+/* end of root components */
 
+/* components css */
 .content{
   display: flex;
   flex-direction: column;
@@ -28,11 +30,22 @@
   align-items: center;
   margin-top: 1.5em;
 }
+/* end of components css */
+
+/*navbar css*/
 
 .navbar a {
   margin-left: 2em;
   text-decoration: none;
   color: black;
+}
+
+#selection a:hover{
+  color: rgb(255, 104, 104);
+}
+
+.navbar input:focus{
+  border-color: rgb(255, 104, 104);
 }
 
 .navbar input {
@@ -46,6 +59,7 @@
 }
 
 input:focus::placeholder {
-  color: white;
+  color: rgb(255, 104, 104);
 }
+/* end of navbar css */
 
