@@ -8,9 +8,9 @@ const ResultShow = (prop) => {
     <div className="result-show">
       {data.map((d) => (
         <div className="dataPrev" key={d.id}>
-          <div>{d.username}</div>
-          <p>{d.message}</p>
-          <div>Like:{d.like}</div>
+          <div id='uname'>{d.username}</div>
+          <p id='msg'>{d.message}</p>
+          <div id='like'>Like:{d.like}</div>
           <button onClick={() => handleDelete(d.id)}>Delete</button>
         </div>
       ))}
