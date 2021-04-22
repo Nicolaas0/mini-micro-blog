@@ -71,6 +71,10 @@ input:focus::placeholder {
   border-bottom: 1px solid rgba(0, 0, 0, 0.123);
 }
 
+.dataPrev:last-child(){
+  border: none;
+}
+
 .dataPrev div,.dataPrev p,.dataPrev button{
   margin-bottom: 0.5em;
 }
@@ -91,7 +95,10 @@ input:focus::placeholder {
   font-size: 0.7em;
 }
 
-#ic{
-width: 10%;
+.ic{
+  margin-top: 0.3em;
+width: 8%;
 cursor: pointer;
+margin-left: 0.5em;
 }
+
