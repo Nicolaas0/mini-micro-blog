@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@1,500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
 
 * {
   margin: 0;
@@ -9,14 +9,14 @@
   outline: none;
 }
 /* root component css */
-.App{
+.App {
   display: flex;
   flex-direction: column;
 }
 /* end of root components */
 
 /* components css */
-.content{
+.content {
   display: flex;
   flex-direction: column;
   align-self: center;
@@ -42,11 +42,11 @@
   color: black;
 }
 
-#selection a:hover{
+#selection a:hover {
   color: rgb(255, 104, 104);
 }
 
-.navbar input:focus{
+.navbar input:focus {
   border-color: rgb(255, 104, 104);
 }
 
@@ -66,39 +66,40 @@ input:focus::placeholder {
 /* end of navbar css */
 
 /* result show css */
-.dataPrev{
-  width: 14em;
+.dataPrev {
+  width: 35em;
   border-bottom: 1px solid rgba(0, 0, 0, 0.123);
 }
 
-.dataPrev:last-child(){
+.dataPrev:last-child() {
   border: none;
 }
 
-.dataPrev div,.dataPrev p,.dataPrev button{
+.dataPrev div,
+.dataPrev p,
+.dataPrev button {
   margin-bottom: 0.5em;
 }
 
-#uname{
-  font-family: 'DM Mono';
+#uname {
+  font-family: "DM Mono";
   color: rgb(255, 104, 104);
   margin-left: 0.5em;
   cursor: pointer;
 }
 
-#msg{
-  font-family:'Roboto Mono' ;
+#msg {
+  font-family: "Roboto Mono";
   text-align: center;
 }
 
-#like{
-  font-size: 0.7em;
+#like {
+  font-size: 0.7rem;
 }
 
-.ic{
-  margin-top: 0.3em;
-width: 8%;
-cursor: pointer;
-margin-left: 0.5em;
+.ic {
+  margin-top: 0.3rem;
+  width: 8%;
+  cursor: pointer;
+  margin-left: 0.5em;
 }
-
