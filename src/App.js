@@ -1,17 +1,23 @@
 import React from 'react';
 import Navbar from './navbar';
-import Form from './Form'
 import Result from './Result'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function app() {
   return (
-    <div className='App'>
+    <Router>
+    <div className="App">
       <Navbar />
-      <div className='content'>
-        <Form />
-        <Result />
+      <div className="content">
+        <Switch>
+          <Route path='/'>
+            <Result/>
+          </Route>
+          <Result />
+        </Switch>
       </div>
-    </div>
+      </div>
+      </Router>
   );
 }
 
