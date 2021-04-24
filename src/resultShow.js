@@ -20,7 +20,6 @@ const ResultShow = (prop) => {
             src="https://img.icons8.com/material-sharp/24/000000/thumbs-down.png" />
           <img
             className="ic"
-            onClick={() => handleDelete(d.id)}
             src="https://img.icons8.com/material-outlined/50/000000/add-trash.png"
           />
         </div>
