@@ -31,7 +31,7 @@ const Result = () => {
   return (
     <React.StrictMode>
       <div>
-        {isLoading && <div>Loading</div>}
+        {isLoading && <div>Loading...</div>}
         {data&& <ResultShow val={data} del={handleDelete} />}
         {/* <ResultShow val={data.filter((dat)=>dat.username === '@nicolaas')} title='Nicolaas comments'/> */}
       </div>
