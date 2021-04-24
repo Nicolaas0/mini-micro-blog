@@ -16,16 +16,20 @@ const Result = () => {
     () => {
       setTimeout(()=>{
               fetch('http://localhost:8000/blogs')
-        .then(res => {
+                .then(res => {
+                  console.log(res);
           return res.json();
         })
         .then(data => {
           setData(data);
           setisLoading(false);
-        });
+        })
+                .catch(err => {
+                  console.log(err.message);
+        })
       },1000)
     },
-    [],
+    []
   );
 
   return (
