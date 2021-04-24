@@ -21,7 +21,7 @@ const Result = () => {
         })
         .then(data => {
           setData(data);
-          setisloading(false);
+          setisLoading(false);
         });
       },1000)
     },
