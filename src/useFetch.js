@@ -12,7 +12,6 @@ const useFetch = (url) => {
           if (!res.ok) {
             throw Error("Error fetching data.");
           }
-          console.log(res);
           return res.json();
         })
         .then((data) => {
