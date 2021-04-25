@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from 'react-router-dom';
 import "./index.css";
 
 const Navbar = () => {
@@ -8,9 +9,9 @@ const Navbar = () => {
         <h2>Blog</h2>
       </div>
       <div id="selection">
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
+        <Link to='/'>Home</Link>
+        <Link to='/create'>Create</Link>
+        <Link to='/'>Contact</Link>
       </div>
       <div id="search">
         <input type="text" placeholder="Search" />
