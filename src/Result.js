@@ -4,7 +4,7 @@ import ResultShow from "./resultShow";
 import useFetch from "./useFetch";
 
 const Result = () => {
-  const {data, isLoading, isError } = useFetch("http://localhost:3000/blogs");
+  const {data, isLoading, isError } = useFetch("http://localhost:8000/blogs");
 
   return (
     <React.StrictMode>
