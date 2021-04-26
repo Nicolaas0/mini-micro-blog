@@ -1,27 +1,22 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ResultShow = (prop) => {
   const data = prop.val;
   const handleDelete = prop.del;
+
+  const slim = (m) => {
+    return `${m.substring(0, 200)}...`;
+  }
 
   return (
     <div className="result-show">
       {data.map((d) => (
         <div className="dataPrev" key={d.id}>
           <div id="uname">{d.username}</div>
-          <p id="msg">{d.message}</p>
+          <p id="msg">{slim(d.message)}</p>
+          <Link><div>Read More</div></Link>
           <div id="like">Like:{d.like}</div>
-          <img
-            className="ic"
-            src="https://img.icons8.com/material-sharp/50/000000/facebook-like.png"
-          />
-          <img
-            className='ic'
-            src="https://img.icons8.com/material-sharp/24/000000/thumbs-down.png" />
-          <img
-            className="ic"
-            src="https://img.icons8.com/material-outlined/50/000000/add-trash.png"
-          />
         </div>
       ))}
     </div>
