@@ -1,26 +1,27 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 const ResultShow = (prop) => {
   const data = prop.val;
-  const handleDelete = prop.del;
+  const { id } = useParams();
 
   const slim = (m) => {
     return `${m.substring(0, 200)}...`;
-  }
+  };
 
   return (
     <div className="result-show">
-      {data.map((d) => (
+      {data.map((d) =>(
         <div className="dataPrev" key={d.id}>
           <div id="uname">{d.username}</div>
           <p id="msg">{slim(d.message)}</p>
-          <Link><div>Read More</div></Link>
+          <Link to={`/blog/${d.id}`}>
+            <div>Read More</div>
+          </Link>
           <div id="like">Like:{d.like}</div>
         </div>
       ))}
     </div>
   );
-};
-
+    }
 export default ResultShow;
