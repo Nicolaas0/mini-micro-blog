@@ -1,7 +1,6 @@
 import React from "react";
 import "./index.css";
 import useFetch from "./useFetch";
-import BDShow from './BDShow';
 import { useParams } from "react-router";
 
 const BlogDetails = () => {
