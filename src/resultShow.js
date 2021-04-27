@@ -6,7 +6,12 @@ const ResultShow = (prop) => {
   const { id } = useParams();
 
   const slim = (m) => {
-    return `${m.substring(0, 200)}...`;
+    if (m.length > 200) {
+     m = `${m.substring(0, 200)}...`; 
+    } else {
+      m = m;
+    }
+    return m;
   };
 
   return (
