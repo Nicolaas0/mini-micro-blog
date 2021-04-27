@@ -103,3 +103,12 @@ input:focus::placeholder {
   cursor: pointer;
   margin-left: 0.5em;
 }
+
+/* Create component css */
+.create{
+  text-align: center;
+}
+.create input, .create textarea{
+  display: block;
+  margin: 0.5em 0;
+}
