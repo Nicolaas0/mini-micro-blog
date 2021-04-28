@@ -1,11 +1,20 @@
 import React from "react";
 import "./index.css";
 import useFetch from "./useFetch";
-import { useParams } from "react-router";
+import { useHistory, useParams } from "react-router";
 
 const BlogDetails = () => {
   const { id } = useParams();
-  const { data, isLoading, isError } = useFetch("http://localhost:8000/blogs/" + id);
+  const { data, isLoading, isError } = useFetch("http://localhost:3000/blogs/" + id);
+  const history = useHistory();
+
+  const handleDelete = () => {
+    fetch('http://localhost:3000/blogs/' + data.id, {
+      method: 'DELETE'
+    }).then(() => [
+      history.push('/')
+    ])
+  }
 
   return (
     <div className="dataPrev">
@@ -27,6 +36,7 @@ const BlogDetails = () => {
           <img
             className="ic"
             src="https://img.icons8.com/material-outlined/50/000000/add-trash.png"
+            onClick={handleDelete}
           />
         </article>
       )}
