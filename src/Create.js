@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router";
 
 const Create = () => {
   const [username, setUsername] = useState("");
   const [message, setMessage] = useState("");
   const [like, setLike] = useState("");
   const [isPending, setIsPending] = useState(false);
+  const hist = useHistory();
   let l = Math.floor(Math.random() * 10);
 
   const likeGen = () => {
@@ -23,12 +25,13 @@ const Create = () => {
 
     setIsPending(true);
 
-    fetch("http://localhost:8000/blogs", {
+    fetch("http://localhost:3000/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(v),
     }).then(() => {
       setIsPending(false);
+      hist.push('/');
     });
   };
 
